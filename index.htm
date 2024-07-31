@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="all-cards">
+                <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex">
+                        <div class="box">
+                            <div class="image-box">
+                                <img src="/img/baku.jpg" alt="">
+                            </div>
+                            <div class="image-map">
+                                <img src="/img/bakumap.png" alt="">
+                            </div>
+                        <h3>Baku</h3>
+                        <p>Culture & history / Nature/ Sights</p>
+                        <a href="#"> details</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex">
+                        <div class="box">
+                            <div class="image-box">
+                                <img src="/img/seki1.jpg" alt="">
+                            </div>
+                            <div class="image-map">
+                                <img src="/img/sekimap.png" alt="">
+                            </div>
+                        <h3>Baku</h3>
+                        <p>Culture&history / Nature/ Sights</p>
+                        <a href="#"> details</a>
+                    </div>
+                    </div>
+                    <div class="swiper-slide flex">
+                        <div class="box">
+                            <div class="image-box">
+                                <img src="/img/ismayilli1.jpg" alt="">
+                            </div>
+                            <div class="image-map">
+                                <img src="/img/ismayillimap.png" alt="">
+                            </div>
+                        <h3>Baku</h3>
+                        <p>Culture&history / Nature/ Sights</p>
+                        <a href="#"> details</a>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide flex">
+                        <div class="box">
+                            <div class="image-box">
+                                <img src="/img/qebele.jpg" alt="">
+                            </div>
+                            <div class="image-map">
+                                <img src="/img/qebelemap.png" alt="">
+                            </div>
+                        <h3>Baku</h3>
+                        <p>Culture&history / Nature/ Sights</p>
+                        <a href="#"> details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev swiperbtn"></div>
+                <div class="swiper-button-next swiperbtn"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Include plugin after Swiper -->
+        <script>
+        function myPlugin({ swiper, extendParams, on }) {
+            extendParams({
+            debugger: false,
+            });
+            on('init', () => {
+            if (!swiper.params.debugger) return;
+            console.log('init');
+            });
+            on('click', (swiper, e) => {
+            if (!swiper.params.debugger) return;
+            console.log('click');
+            });
+            on('tap', (swiper, e) => {
+            if (!swiper.params.debugger) return;
+            console.log('tap');
+            });
+            on('doubleTap', (swiper, e) => {
+            if (!swiper.params.debugger) return;
+            console.log('doubleTap');
+            });
+            on('sliderMove', (swiper, e) => {
+            if (!swiper.params.debugger) return;
+            console.log('sliderMove');
+            });
+            on('slideChange', () => {
+            if (!swiper.params.debugger) return;
+            console.log(
+                'slideChange',
+                swiper.previousIndex,
+                '->',
+                swiper.activeIndex
+            );
+            });
+            on('slideChangeTransitionStart', () => {
+            if (!swiper.params.debugger) return;
+            console.log('slideChangeTransitionStart');
+            });
+            on('slideChangeTransitionEnd', () => {
+            if (!swiper.params.debugger) return;
+            console.log('slideChangeTransitionEnd');
+            });
+            on('transitionStart', () => {
+            if (!swiper.params.debugger) return;
+            console.log('transitionStart');
+            });
+            on('transitionEnd', () => {
+            if (!swiper.params.debugger) return;
+            console.log('transitionEnd');
+            });
+            on('fromEdge', () => {
+            if (!swiper.params.debugger) return;
+            console.log('fromEdge');
+            });
+            on('reachBeginning', () => {
+            if (!swiper.params.debugger) return;
+            console.log('reachBeginning');
+            });
+            on('reachEnd', () => {
+            if (!swiper.params.debugger) return;
+            console.log('reachEnd');
+            });
+        }
+        </script>
+        <script>
+          // Init Swiper
+        var swiper = new Swiper('.swiper', {
+            // Install Plugin To Swiper
+        modules: [myPlugin],
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+            // Enable debugger
+            debugger: true,
+        });
+        </script>
+    </body>
+
+</body>
+</html>
