@@ -39,6 +39,7 @@ body {
   padding: 0 0 15px 0;
   background-color: #fff;
   margin: 0;
+  overflow: hidden;
 }
 
 .flex{
@@ -57,7 +58,7 @@ body {
   transform: scale(1);
 }
 .image-box img:hover{
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 .image-map img{
   object-fit: contain !important;
