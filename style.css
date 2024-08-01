@@ -57,8 +57,9 @@ body {
   transition: all 0.5s ease-in-out;
   transform: scale(1);
 }
+.image-box{overflow: hidden;}
 .image-box img:hover{
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .image-map img{
   object-fit: contain !important;
